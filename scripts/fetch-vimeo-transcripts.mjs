@@ -61,7 +61,7 @@ for (const row of selected) {
   const english = (tracks.data ?? []).filter((track) => /^en(?:-|$)/i.test(track.language ?? ''));
   const track = english.find((item) => item.active) ?? english[0];
   row.title = video.name ?? row.title;
-  row.role = /(?:guided\s+)?prayer for holiness|guided prayer/i.test(row.title) ? 'GUIDED_PRAYER' : 'TEACHING';
+  row.role = /(?:guided\s+)?prayers? for holiness|guided prayers?/i.test(row.title) ? 'GUIDED_PRAYER' : 'TEACHING';
   row.notes = `Read-only Vimeo metadata checked; ${english.length} English text track(s) available.`;
   if (!track?.link) {
     row.transcript_status = 'NOT_AVAILABLE';
