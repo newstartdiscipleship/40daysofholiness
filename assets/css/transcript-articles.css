@@ -1,0 +1,49 @@
+.teaching-article,
+.guided-prayer {
+  margin-block: clamp(3rem, 8vw, 6rem);
+}
+
+.teaching-article > p:not(.kicker),
+.guided-prayer > p:not(.kicker) {
+  max-width: 68ch;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  line-height: 1.8;
+}
+
+.teaching-article > h2,
+.guided-prayer > h2 {
+  max-width: 20ch;
+  margin: .25rem 0 1.75rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  letter-spacing: -.025em;
+}
+
+.teaching-article .video-frame,
+.guided-prayer .video-frame {
+  margin: 0 0 clamp(2rem, 6vw, 4rem);
+  overflow: hidden;
+  border-radius: .75rem;
+  box-shadow: 0 1.25rem 3rem rgb(35 61 53 / .14);
+}
+
+.guided-prayer {
+  margin-inline: calc(50% - 50vw);
+  padding: clamp(3rem, 8vw, 6rem) max(1rem, calc((100vw - 52rem) / 2));
+  background: var(--cream);
+}
+
+.guided-prayer .kicker {
+  color: #76551f;
+}
+
+.guided-prayer > p:not(.kicker) {
+  font-style: italic;
+}
+
+@media (max-width: 44rem) {
+  .teaching-article > h2,
+  .guided-prayer > h2 {
+    font-size: 2.25rem;
+  }
+}

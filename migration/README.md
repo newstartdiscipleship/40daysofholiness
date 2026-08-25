@@ -15,7 +15,9 @@ Fifty-one routes are at `PAGE_BUILT`. Two routes remain at `BASELINE_CAPTURED` a
 - `/fullscreen-page`
 - `/pentecost-video-email-thanks`
 
-No transcript retrieval, Git push, Cloudflare deployment, or production change has occurred.
+No Git push, Cloudflare deployment, or production change has occurred.
+
+Owner authorization was subsequently received for Day 1–5 transcript work. Ten English Vimeo text tracks—one teaching and one guided prayer for each day—were retrieved through read-only API calls and preserved as raw VTT. Clean working copies, teaching-first page drafts, explicit video roles, and the fidelity inventory in `day01-day05-fidelity.md` now exist. These drafts remain below `READY_FOR_REVIEW` until spoken phrasing, Scripture links, quotation treatment, and phrase-level fidelity checks are complete. No transcript outside Day 1–5 was requested or retrieved.
 
 ## Canonical trackers
 
