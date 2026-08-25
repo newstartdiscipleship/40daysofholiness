@@ -9,5 +9,8 @@
     "check": "node scripts/check-site.mjs",
     "preview": "wrangler dev",
     "deploy:preview": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.125.0"
   }
 }

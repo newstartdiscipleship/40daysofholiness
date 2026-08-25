@@ -6,6 +6,8 @@
 credentials*.json
 secrets*.json
 node_modules/
+.wrangler/
+.wrangler-config/
 dist/
 migration/wix-page-models/
 migration/*-source.html
