@@ -41,6 +41,42 @@
   font-style: italic;
 }
 
+/* Keep workbook-driven lesson visitors close to the primary teaching video. */
+.lesson-hero {
+  padding-block: clamp(1.25rem, 3vw, 2.25rem);
+}
+
+.lesson-hero h1 {
+  max-width: 24ch;
+  margin-block: .15rem .45rem;
+  font-size: clamp(2rem, 4.5vw, 3.35rem);
+  line-height: 1.08;
+}
+
+.lesson-hero p:not(.eyebrow) {
+  margin-block: 0;
+  max-width: 60rem;
+  font-size: clamp(.98rem, 1.5vw, 1.1rem);
+  line-height: 1.5;
+}
+
+.lesson-content {
+  margin-top: clamp(1rem, 2.5vw, 1.75rem);
+}
+
+.lesson-content .teaching-article {
+  margin-top: 0;
+}
+
+.lesson-content .teaching-article > h2 {
+  margin-bottom: 1rem;
+  font-size: clamp(1.65rem, 3.5vw, 2.5rem);
+}
+
+.lesson-content .teaching-article .video-frame {
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+}
+
 @media (max-width: 44rem) {
   .teaching-article > h2,
   .guided-prayer > h2 {
