@@ -1,0 +1,20 @@
+﻿{
+    "root":  "https://www.40daysofholiness.com/",
+    "pages":  53,
+    "links":  645,
+    "videos":  82,
+    "unique_video_ids":  82,
+    "assets":  329,
+    "redirects_observed":  0,
+    "sitemaps":  [
+                     "https://www.40daysofholiness.com/sitemap.xml",
+                     "https://www.40daysofholiness.com/blog-posts-sitemap.xml",
+                     "https://www.40daysofholiness.com/blog-categories-sitemap.xml",
+                     "https://www.40daysofholiness.com/pages-sitemap.xml"
+                 ],
+    "limitations":  [
+                        "Public crawl cannot discover unlinked Wix redirects.",
+                        "Owner URL lists, Wix redirect export, Search Console, analytics, backlinks, books, workbooks, QR codes, emails, and ads remain external inputs.",
+                        "Rendered client-only interactions require later visual/browser QA."
+                    ]
+}

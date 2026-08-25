@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+secrets*.json
+node_modules/
+dist/
+migration/wix-page-models/
+migration/*-source.html
+migration/chrome-profile*/
+migration/*-profile*/
+migration/netlog.json
+migration/rendered-*.html

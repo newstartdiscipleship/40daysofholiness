@@ -1,0 +1,13 @@
+{
+  "name": "40-days-of-holiness-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static migration of 40daysofholiness.com",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-site.mjs",
+    "check": "node scripts/check-site.mjs",
+    "preview": "wrangler dev",
+    "deploy:preview": "wrangler deploy"
+  }
+}
