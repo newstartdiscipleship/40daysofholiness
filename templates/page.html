@@ -7,13 +7,15 @@
   {{DESCRIPTION}}
   <link rel="canonical" href="{{CANONICAL}}">
   <meta name="robots" content="{{ROBOTS}}">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="{{OG_TYPE}}">
   <meta property="og:title" content="{{TITLE}}">
   {{OG_DESCRIPTION}}
   <meta property="og:url" content="{{CANONICAL}}">
-  <meta name="twitter:card" content="summary">
+  {{OG_IMAGE}}
+  <meta name="twitter:card" content="{{TWITTER_CARD}}">
   <link rel="stylesheet" href="/assets/css/site.css">
   <script defer src="/assets/js/site.js"></script>
+  <script type="application/ld+json">{{STRUCTURED_DATA}}</script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>

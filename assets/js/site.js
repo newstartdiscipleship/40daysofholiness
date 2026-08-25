@@ -1,6 +1,14 @@
 const toggle = document.querySelector('[data-nav-toggle]');
 const nav = document.querySelector('[data-site-nav]');
 if (toggle && nav) {
+  const mobileNav = window.matchMedia('(max-width: 44rem)');
+  const resetNav = () => {
+    const mobile = mobileNav.matches;
+    nav.hidden = mobile;
+    toggle.setAttribute('aria-expanded', 'false');
+  };
+  resetNav();
+  mobileNav.addEventListener('change', resetNav);
   toggle.addEventListener('click', () => {
     const open = toggle.getAttribute('aria-expanded') === 'true';
     toggle.setAttribute('aria-expanded', String(!open));

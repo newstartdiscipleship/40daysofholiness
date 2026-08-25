@@ -4,9 +4,11 @@ Captured from the public Wix site on 2026-08-25 (America/Chicago). This is the a
 
 ## Current implementation status
 
-The owner approved implementation on 2026-08-25. A dependency-minimal Node ESM build now generates all 53 preserved routes into `dist/`; Cloudflare is configured to publish only that directory. Automated checks currently verify 53 generated route files, 82 Vimeo embeds, 50 unique indexable sitemap canonicals, required output files, H1s, and production-domain canonicals.
+The owner approved implementation on 2026-08-25. A dependency-minimal Node ESM build now generates all 53 preserved routes into `dist/`; Cloudflare is configured to publish only that directory. Automated checks currently verify 53 generated route files, 82 Vimeo embeds, 50 unique indexable sitemap canonicals, required output files, H1s, production-domain canonicals, and valid JSON-LD. Preview responses receive `X-Robots-Tag: noindex, nofollow`; that preview-only safeguard must be deliberately removed or changed only as part of an authorized production cutover.
 
 Authored Wix feature-model content has been normalized into `Content/pages/` for the static routes, and both Wix Blog articles were extracted from their public server-rendered post bodies. The Blog index and noindex Search route now have static implementations. Twenty-five unique original Wix media objects were downloaded locally, satisfying 326 tracker rows; three YouTube thumbnails remain external discoveries.
+
+Reusable metadata output now includes Open Graph, Twitter cards, WebPage/Breadcrumb/VideoObject structured data, WebSite data on the homepage, and BlogPosting data on article routes. Representative desktop visual captures are stored in this directory; full browser, mobile, interaction, and accessibility QA remains open.
 
 Fifty-one routes are at `PAGE_BUILT`. Two routes remain at `BASELINE_CAPTURED` and require owner decisions because their public Wix models contain no authored body content:
 
@@ -21,7 +23,7 @@ No transcript retrieval, Git push, Cloudflare deployment, or production change h
 - `redirects.csv`: redirects observed publicly plus future owner/Wix exports. A crawl cannot prove unlinked redirect sources.
 - `links.csv`: page-to-destination edges, anchor text, type, and download flag.
 - `videos.csv`: 82 verified page/video associations from read-only Wix feature models: two distinct Vimeo IDs on each daily page, plus one on `/welcome` and one on `/congrats`. No Vimeo API call was made and transcripts remain unauthorized.
-- `assets.csv`: discovered image usages and alt text. Assets are not yet downloaded or approved for migration.
+- `assets.csv`: discovered image usages and alt text. Twenty-five unique Wix media objects are stored locally; oversized originals use a public optimized Wix rendition and are identified in tracker notes. Three YouTube thumbnails remain external discoveries.
 - `seo-baseline.csv`: titles, descriptions, canonicals, H1s, robots, social metadata, and JSON-LD.
 
 Supporting evidence includes `robots-source.txt`, sitemap XML files, `router-pages.csv`, and `crawl-summary.json`. Raw HTML/model debugging files are ignored and are not authoritative.
@@ -36,13 +38,13 @@ The site relies on Wix client behavior. Rendered interaction, form submission de
 
 - All 53 inventoried routes returned HTTP 200; all `/day01`–`/day40` routes are present.
 - `/` and `/home` share the homepage canonical. Preserve both until the owner decides whether `/home` should remain a duplicate route or directly redirect; no change is proposed yet.
-- `/day05` has an apparent title error (“Day 3”), and `/day36` has an apparent title error (“Day 37”). Correcting titles does not require changing their slugs.
-- Six routes lack meta descriptions; four lack H1s. `/search` and `/congrats` correctly expose `noindex` in the current baseline.
+- The Wix baseline title errors on `/day05` (“Day 3”) and `/day36` (“Day 37”) are corrected in the static implementation without changing either slug; original values and correction notes remain in `seo-baseline.csv`.
+- Three apparently contentless or utility routes still lack meta descriptions: `/blank`, `/fullscreen-page`, and `/pentecost-video-email-thanks`. `/search` and `/congrats` correctly retain `noindex` page directives.
 - `/blank`, `/fullscreen-page`, `/home`, and `/congrats` are Wix-router routes omitted from ordinary navigation/sitemaps in some cases; they may be legacy, functional, campaign, or externally referenced. Never remove them without owner review.
 - The public crawl observed no redirect sources. This is not evidence that no Wix redirects exist; the Wix redirect export is a launch blocker.
 - Download/lead-capture pages expose no static file link or ordinary HTML form. Their delivery flow, consent, email integration, and required replacement behavior need owner/browser QA.
 - There are 82 unique Vimeo embeds. Each daily page contains two, so their roles (for example teaching versus prayer/supporting content) must be labeled before template design and transcript selection.
-- The crawl records 329 image usages and many Wix variants; asset deduplication, ownership, originals, dimensions, formats, and alt-text QA remain incomplete.
+- The crawl records 329 image usages and many Wix variants. Deduplication and local capture are complete for the 25 unique Wix media objects, but ownership, dimensions/formats, placement, and alt-text QA remain incomplete.
 - Major outbound dependencies include NewStart/40 Days sales and challenge subdomains plus YouTube, SoundCloud, Facebook, LinkedIn, and X/Twitter. They require functional QA but must not be changed without authorization.
 
 ## Proposed architecture (approval required)
