@@ -15,3 +15,4 @@ migration/chrome-profile*/
 migration/*-profile*/
 migration/netlog.json
 migration/rendered-*.html
+Content/assets-source/
