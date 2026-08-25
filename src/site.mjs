@@ -5,7 +5,7 @@ export const site = {
   navigation: [
     ['Home', '/'],
     ['Welcome', '/welcome'],
-    ['Day 1', '/day01'],
+    ['Day 1', '/holiness-of-god'],
     ['Blog', '/blog']
   ]
 };
