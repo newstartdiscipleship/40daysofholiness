@@ -10,7 +10,30 @@ const titles = {
   day02: ['All Things Are Holy Only as They Relate to God', 'Guided Prayer: Holiness Comes From God'],
   day03: ['Sin Separates Us From Holiness', 'Guided Prayer: Confession and Cleansing'],
   day04: ['God Planned to Make Us Holy', 'Guided Prayer: Resting in God’s Plan'],
-  day05: ['Jesus Is the Perfect Human Expression of Holiness', 'Guided Prayer: Becoming Like Jesus']
+  day05: ['Jesus Is the Perfect Human Expression of Holiness', 'Guided Prayer: Becoming Like Jesus'],
+  day06: ['Saved by Grace for Holiness', 'Guided Prayer: Saved From Slavery for Holiness'],
+  day07: ['Holiness in the Old Testament', 'Guided Prayer: Teach Us Your Holiness'],
+  day08: ['Can You Grow in Holiness?', 'Guided Prayer: Deeper Holiness'],
+  day09: ['Biblical Holiness Means Separation to God', 'Guided Prayer: Everything Belongs to God'],
+  day10: ['Holiness Means Purity From Corruption', 'Guided Prayer: Purify the Heart'],
+  day11: ['The Sin Nature and the Human Heart', 'Guided Prayer: Create in Me a Clean Heart'],
+  day12: ['The Deceitful Heart and Self-Sovereignty', 'Guided Prayer: Search and Cure My Heart'],
+  day13: ['Jesus Makes Us Holy Through His Blood', 'Guided Prayer: Holiness Through Jesus'],
+  day14: ['Holiness and the New Birth', 'Guided Prayer: Live as One of God’s Holy People'],
+  day15: ['The Possibilities of Grace', 'Guided Prayer: See the Possibilities of Grace']
+};
+
+const introductions = {
+  day06: 'We are <strong>saved by grace for holiness</strong>. God does not wait for us to become holy before he loves and rescues us; he delivers us from slavery to sin and then leads us into the holy life for which he saved us.',
+  day07: '<strong>Holiness in the Old Testament</strong> is not an irrelevant collection of rules. Leviticus patiently teaches Israel what God is like, why his holiness differs from pagan counterfeits, and how his people are to reflect his character.',
+  day08: '<strong>Can you grow in holiness?</strong> Exodus and Leviticus show that deeper levels of holiness are both needed and possible. God calls his people beyond spiritual stagnation into deeper fellowship, usefulness, joy, and Christlikeness.',
+  day09: '<strong>Biblical holiness means separation to God</strong> from what is common or ordinary. When God claims a life, no role, possession, routine, relationship, thought, or moment remains outside his ownership.',
+  day10: '<strong>Holiness means purity from corruption</strong>—not merely cleaner outward behavior, but unmixed motives and a heart free from sin’s defilement. God intends to cleanse the wound at its deepest point.',
+  day11: 'The <strong>sin nature and the human heart</strong> explain why knowing what is right does not automatically make us do it. Scripture identifies a bent toward self-sovereignty that produces sinful actions and attitudes.',
+  day12: 'The Bible describes a <strong>deceitful heart</strong> whose inward bend toward self-sovereignty disguises itself as self-protection, self-esteem, and even religious correctness. God exposes this hidden corruption in order to heal it.',
+  day13: '<strong>Jesus makes us holy through his blood.</strong> The cross provides both a righteous standing before God and the cleansing, transforming holiness that restores what sin has broken.',
+  day14: '<strong>Holiness and the new birth</strong> belong together. God justifies, adopts, and regenerates believers, giving them a new and holy life through the presence and power of the Holy Spirit.',
+  day15: 'The <strong>possibilities of grace</strong> change how we hear God’s call to holiness. Grace is not only forgiveness when we fail; it is God’s enabling power to accomplish his will in us.'
 };
 
 function paragraphs(text) {
@@ -34,6 +57,7 @@ for (const slug of requestedDays) {
   <p class="kicker">Teaching</p>
   <h2 id="teaching-heading">${titles[slug][0]}</h2>
   <!-- TEACHING_VIDEO -->
+  ${introductions[slug]?`<p>${introductions[slug]}</p>`:''}
   ${paragraphs(teaching)}
 </section>
 
